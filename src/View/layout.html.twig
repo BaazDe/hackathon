@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% block title %}{% endblock %}</title>
-
+    <link href="https://www.fontspace.com/chequered-ink/scare-arms" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     {% block stylesheet %}{% endblock %}
-    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="icon" href="/assets/images/logo.jpg">
 </head>
 
 <body>
+<img class = "background" src="{% block image %}/assets/images/background.jpg{% endblock %}" alt ="background"/>
+<header>
+    <nav>
+        <h1>Sinistest</h1>
+    </nav>
+</header>
 
 {% block content %}{% endblock %}
 {% block javascript %}{% endblock %}
