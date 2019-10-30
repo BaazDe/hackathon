@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Movie list</h1>
+
+    {% for movieByDate in moviesByDate %}
+    <p>{{ movieByDate.title }}</p>
+    {% endfor %}
+
+
+{% endblock %}
