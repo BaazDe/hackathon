@@ -1,12 +1,18 @@
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}{% endblock %}
+{% block stylesheet %}    <link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
+
+
 
 {% block content %}
-    <section>
-        <div id='progress' style='background:red; height:10px;'></div>
+    <section class ="timer">
+        <div id='progress'></div>
+        <div class="underProgressBar"></div>
     </section>
 
+{% endblock %}
+
+{% block test %}
     <h1>Movie list</h1>
 
     {% for movieByDate in moviesByDate %}

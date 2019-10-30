@@ -1,0 +1,19 @@
+.timer{
+    position: relative;
+}
+
+#progress, .underProgressBar{
+    position: absolute;
+    height:30px;
+}
+
+#progress{
+    background:#8A0707;
+}
+.underProgressBar {
+    height:25px;
+    background: white;
+    width:calc(100% - 10px);
+    z-index: -1;
+    border: 5px solid #8A0707;
+}
