@@ -1,3 +1,35 @@
+#questions {
+    font-family: 'scare_armsregular';
+}
+#title_question {
+    color: red ;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#choices {
+    margin: 40px 19%;
+    width: 80%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-container: flex-wrap;
+    justify-content: space-around;
+
+}
+
+ #choices button {
+     width: 40%;
+     height: 50px;
+     font-family: 'scare_armsregular';
+     font-size: 30px;
+ }
+
+ #choices p {
+     margin: 10px;
+ }
+
 .timer{
     margin-bottom: 3em;
 }
@@ -18,9 +50,8 @@
     border: 5px solid #8A0707;
 }
 
-
-
 .answers{
     display: flex;
     flex-wrap: wrap;
+
 }
