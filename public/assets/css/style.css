@@ -20,34 +20,27 @@
     margin: 0;
     padding: 0;
 }
-header
-{
+header {
     background-color: black;
 }
 
 nav h1
 {
     text-align: left;
-    font-size:25px;
+    font-size:35px;
     color:red;
-    width:100%;
-}
+    font-family: 'scare_armsregular', sans-serif;
+    margin: 10px;
+    padding: 10px;
 
-nav
-{
-    width:98%;
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    height:100%;
 }
-
-body
-{
-    background-color: black;
+nav {
+    margin: 3;
+    padding: 1;
 }
-
+body{
+    background: black;
+}
 
 .background {
     position:fixed;
