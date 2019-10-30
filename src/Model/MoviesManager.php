@@ -21,7 +21,6 @@ class MoviesManager extends AbstractManager
 
 
     public function selectByYear(int $year)
-
     {
         // prepared request
         $statement = $this->pdo->prepare("SELECT * FROM $this->table WHERE year=:year");

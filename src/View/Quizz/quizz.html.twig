@@ -1,15 +1,22 @@
 {% extends 'layout.html.twig' %}
 
+<<<<<<< HEAD
 
 {% block title %}Quizz{% endblock %}
 
 {% block image %}<link rel="icon" href="/assets/images/spooky.jpg">{% endblock %}
 
 {% block stylesheet %}<link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
+=======
+{% block stylesheet %}    <link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
+
+
+>>>>>>> a16edf3eb90c783a1fbdef2427ef458dd99f9d75
 
 {% block content %}
-    <section>
-        <div id='progress' style='background:red; height:10px;'></div>
+    <section class ="timer">
+        <div id='progress'></div>
+        <div class="underProgressBar"></div>
     </section>
 <section id="questions">
     <h1 id="title_question">Which film belong to this image</h1>
@@ -37,6 +44,9 @@
 {% block test %}
 
 
+{% endblock %}
+
+{% block test %}
     <h1>Movie list</h1>
 
     {% for movieByDate in moviesByDate %}
