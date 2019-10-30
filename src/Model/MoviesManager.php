@@ -8,6 +8,7 @@ class MoviesManager extends AbstractManager
     /**
      *
      */
+
     const TABLE = 'Movies';
 
     /**
@@ -17,6 +18,7 @@ class MoviesManager extends AbstractManager
     {
         parent::__construct(self::TABLE);
     }
+
 
     public function selectByYear(int $year)
     {

@@ -7,6 +7,7 @@ use App\Model\MoviesManager;
 
 class QuizzController extends AbstractController
 {
+
     public function quizz()
     {
         //calling MoviesManager

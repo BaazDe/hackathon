@@ -1,6 +1,11 @@
 {% extends 'layout.html.twig' %}
 
+
+
+{% block title %}Quizz{% endblock %}
+
 {% block stylesheet %}    <link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
+
 
 {% block content %}
 
@@ -8,23 +13,25 @@
         <div id='progress'></div>
         <div class="underProgressBar"></div>
     </section>
-    <div class="content">
-        <div class="question">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium obcaecati quasi sed suscipit tempora. Aspernatur explicabo fugiat praesentium provident quam, repellat rerum vel? Atque ea, eveniet hic quo repellendus tempore?</p>
-        </div>
 
-        <div class="affiche">
-            <img src="{{  }}" alt="">
-        </div>
-        <div class="answers">
-            <button>Answer 1</button>
-            <button>Answer 2</button>
-            <button>Answer 3</button>
-            <button>Answer 4</button>
-        </div>
+
+<section id="questions">
+
+    <h1 id="title_question">Which film belong to this image</h1>
+
+    <div id="choices">
+        <p>
+        <button>Final destination</button>
+        <button>Scream</button>
+        </p>
+        <p>
+        <button>Psychose</button>
+        <button>Tchoupi</button>
+        </p>
     </div>
-{% endblock %}
+</section>
 
+{% endblock %}
 {% block javascript %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../assets/JS/timerProgressbar.js"></script>
