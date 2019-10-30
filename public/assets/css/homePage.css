@@ -1,0 +1,104 @@
+*{
+    margin: 0%;
+    padding: 0;
+
+}
+
+ html {
+    margin:0;
+    padding:0;
+    background-image: url("../images/background.jpg");
+    color: red;
+    height: 100%;
+}
+
+ body{
+     width: 100%;
+     height: 100%;
+ }
+
+ section{
+     display: flex;
+     background-image: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fmedia1.giphy.com%2Fmedia%2FzXKA3p9aR3u7u%2Fgiphy.gif%3Fcid%3D6104955e6bfe640b662f7f862e036e32040f64491f4defc6%26rid%3Dgiphy.gif");
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 50%;
+     height: 50%;
+     margin: auto;
+     margin-top: 10%;
+     border-radius: 5%;
+
+ }
+
+ button{
+   margin: 30% auto 0 auto;
+   height: 12%;
+   width: 10%;
+   margin-top: auto ;
+ }
+
+
+ p{
+     text-align: center;
+     font-size: 25px;
+     margin-top: 5%;
+ }
+
+.glow-on-hover {
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(#e00b0b, #e90101);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
