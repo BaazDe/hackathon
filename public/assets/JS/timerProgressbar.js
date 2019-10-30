@@ -1,4 +1,4 @@
-let TotalSeconds = 20;
+let TotalSeconds = 5;
 
 function started(duration) {
     let documentWidth = $(document).width();
@@ -16,9 +16,8 @@ function started(duration) {
             width: progresBarWidth + 'px',
             transition: 'width, ease 3s'
         });
-
         if (diff <= 0) {
-            clearInterval(intervalSetted);
+            window.setTimeout("location=('/home/index');",3000);
         }
     }
 

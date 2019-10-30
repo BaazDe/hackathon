@@ -12,7 +12,7 @@
 }
 .underProgressBar {
     height:25px;
-    background: white;
+    background: rgba(255,255,255,0);
     width:calc(100% - 10px);
     z-index: -1;
     border: 5px solid #8A0707;
