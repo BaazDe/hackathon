@@ -24,10 +24,10 @@
 
             <div class="answers">
                 {% for randomMovie in randomMovies %}
-                   <a href="../../quizz/quizz/?id={{ randomMovie.id }}">{{ randomMovie.director }}</a>
+                    <a href="../../quizz/quizz/?id={{ randomMovie.id }}" class="random">{{ randomMovie.director }}</a>
                 {% endfor %}
                 {% for randomWrongMovie in randomWrongMovies %}
-                   <a href="#" onclick="checkQuestion()">{{ randomWrongMovie.director }}</a>
+                    <a href="#" onclick="checkQuestion()" class="random"> {{ randomWrongMovie.director }}</a>
                 {% endfor %}
 
             </div>
@@ -38,6 +38,12 @@
 {% endblock %}
 
 {% block javascript %}
+<<<<<<< HEAD
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="../../assets/JS/timerProgressbar.js"></script>
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../assets/JS/randomizeButtons.js"></script>
+    <script src="../assets/JS/timerProgressbar.js"></script>
+>>>>>>> 0607bd28353d2c21edc044f0e05d97fc686ddbaa
 {% endblock %}
