@@ -1,3 +1,12 @@
+@font-face {
+    /*use this command for scare arms font : font-family: scare_armsregular, sans-serif ; */
+    font-family: 'scare_armsregular';
+    src: url('../fonts/scarearms.woff2') format('woff2'),
+    url('../fonts/scarearms.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
