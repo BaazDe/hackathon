@@ -22,6 +22,7 @@
 }
 header {
     background-color: black;
+    opacity: 0.8;
 }
 
 nav h1
@@ -34,9 +35,15 @@ nav h1
     padding: 10px;
 
 }
-nav {
-    margin: 3;
-    padding: 1;
+
+nav
+{
+    width:98%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    height:100%;
 }
 body{
     background: black;
