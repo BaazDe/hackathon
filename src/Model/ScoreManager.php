@@ -35,5 +35,4 @@ class ScoreManager extends AbstractManager
     {
         return $this->pdo->query('UPDATE score set score = 0 WHERE id = 1')->fetchAll();
     }
-
 }

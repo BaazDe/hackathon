@@ -7,13 +7,13 @@
 {% block stylesheet %}    <link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
 
 
-
-
 {% block content %}
+
     <section class ="timer">
         <div id='progress'></div>
         <div class="underProgressBar"></div>
     </section>
+
 
 <section id="questions">
     <p id="score">{{ score[0]['score'] }}</p>
@@ -29,35 +29,10 @@
         <button>Psychose</button>
         <button>Tchoupi</button>
         </p>
-
     </div>
-
-
 </section>
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-{% block test %}
-    <h1>Movie list</h1>
-
-    {% for movieByDate in moviesByDate %}
-    <p>{{ movieByDate.title }}</p>
-    {% endfor %}
-
-
-{% endblock %}
-
-
 {% block javascript %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../assets/JS/timerProgressbar.js"></script>

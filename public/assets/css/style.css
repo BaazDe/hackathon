@@ -22,11 +22,17 @@
     font-family:'honeydripperregular',sans-serif;
 }
 
+<<<<<<< HEAD
 h1, h2, h3, h4, h5, h6 {
     font-family:'scare_armsregular',sans-serif !important;
 }
-header
-{
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+header {
     background-color: black;
     opacity: 0.8;
 }

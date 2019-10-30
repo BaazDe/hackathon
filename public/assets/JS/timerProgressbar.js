@@ -33,6 +33,7 @@ function started(duration)
         if (diff <= 0) {
             window.setTimeout("location=('/defeat/defeat');", 500);
         }
+
     }
 
     timer();
