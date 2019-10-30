@@ -1,0 +1,70 @@
+.timer{
+    margin-bottom: 3em;
+}
+
+#progress, .underProgressBar{
+    position: absolute;
+    height:30px;
+}
+
+#progress{
+    background:#8A0707;
+}
+.underProgressBar {
+    height:25px;
+    background: rgba(255,255,255,0);
+    width:calc(100% - 10px);
+    z-index: -1;
+    border: 5px solid #8A0707;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.question{
+    padding: 1%;
+    width: 60%;
+}
+.question p{
+    color: darkred ;
+    font-family: honeydripperregular, sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+.answering{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 60%;
+    width: 60%;
+    justify-content: space-around;
+}
+
+
+.poster img{
+    padding: 3%;
+    margin: auto;
+    width: 25%;
+}
+
+
+.answers{
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+
+}
+
+.answers button{
+    background: black;
+    color: darkred;
+    font-family: honeydripperregular, sans-serif;
+    font-size: 2em;
+    padding: auto;
+    margin: auto;
+}
+

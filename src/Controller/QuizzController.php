@@ -33,4 +33,17 @@ class QuizzController extends AbstractController
             'movies'=>$movies
         ]);
     }
+    public function quizz3()
+    {
+        //calling MoviesManager
+        $moviesManager = new MoviesManager();
+        $movies = $moviesManager->selectAll();
+        $randomMovie = $moviesManager->randomId();
+        $randomWrongMovie = $moviesManager->randomWrongId();
+        return $this->twig->render('Quizz/quizz3.html.twig', [
+            'randomWrongMovies'=>$randomWrongMovie,
+            'randomMovies'=>$randomMovie,
+            'movies'=>$movies
+        ]);
+    }
 }
