@@ -1,12 +1,44 @@
-.index{
-    position: relative;
-    width: 1440px;
-    height: 1024px;
+*{
+    margin: 0;
+    padding: 0;
 }
-.background {
+
+header
+{
+    background-color: black;
+
+}
+
+nav h1
+{
+    text-align: left;
+    font-size:25px;
+    color:red;
+    width:100%;
+}
+
+nav
+{
+    width:98%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    height:100%;
+}
+
+body
+{
+    background-color: black;
+}
+
+.background
+{
     position:fixed;
     height:100%;
     width:100%;
     object-fit: cover;
     z-index: -1;
+    filter:blur(10px);
 }
+
