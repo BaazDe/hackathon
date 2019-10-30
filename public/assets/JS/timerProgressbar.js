@@ -16,14 +16,14 @@ function started(duration) {
             width: progresBarWidth + 'px',
             transition: 'width, ease 3s'
         });
+
         if (diff <= 5) {
             $('h1').animation = 'shake 0.5s';
             $('h1').animationIterationCount = 'infinite';
-
         }
         if (diff <= 0) {
             window.setTimeout("location=('/defeat/defeat');",3000);
-        }
+
     }
 
     timer();
