@@ -1,36 +1,37 @@
 {% extends 'layout.html.twig' %}
 
+
+
+{% block title %}Quizz{% endblock %}
+
 {% block stylesheet %}    <link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
 
 
-
 {% block content %}
+
     <section class ="timer">
         <div id='progress'></div>
         <div class="underProgressBar"></div>
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eius enim, modi nemo quod quos soluta
-        voluptatibus! Animi dolorum illum laudantium repellat. Asperiores eveniet harum optio repellendus tempore?
-        Molestias, vel?</p>
-{% endblock %}
 
 
+<section id="questions">
 
-{% block test %}
-    <h1>Movie list</h1>
+    <h1 id="title_question">Which film belong to this image</h1>
 
-    {% for movieByDate in moviesByDate %}
-    <p>{{ movieByDate.title }}</p>
-    {% endfor %}
-
+    <div id="choices">
+        <p>
+        <button>Final destination</button>
+        <button>Scream</button>
+        </p>
+        <p>
+        <button>Psychose</button>
+        <button>Tchoupi</button>
+        </p>
+    </div>
+</section>
 
 {% endblock %}
-
 {% block javascript %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../assets/JS/timerProgressbar.js"></script>
