@@ -21,22 +21,25 @@
     padding: 0;
 }
 
-
 .content{
     display: flex;
     flex-direction: column;
 }
-header
-{
+
+header {
     background-color: black;
+    opacity: 0.8;
 }
 
 nav h1
 {
     text-align: left;
-    font-size:25px;
+    font-size:35px;
     color:red;
-    width:100%;
+    font-family: 'scare_armsregular', sans-serif;
+    margin: 10px;
+    padding: 10px;
+
 }
 
 nav
@@ -48,12 +51,9 @@ nav
     align-content: center;
     height:100%;
 }
-
-body
-{
-    background-color: black;
+body{
+    background: black;
 }
-
 
 .background {
     position:fixed;
