@@ -1,0 +1,9 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Hello Wilder !</h1>
+
+    {% for movie in movies %}
+    <p>{{ movie.title }}</p>
+    {% endfor %}
+{% endblock %}
