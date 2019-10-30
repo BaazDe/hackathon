@@ -1,9 +1,11 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
+    <h1>Movie list</h1>
 
-    {% for movie in movies %}
-    <p>{{ movie.title }}</p>
+    {% for movieByDate in moviesByDate %}
+    <p>{{ movieByDate.title }}</p>
     {% endfor %}
+
+
 {% endblock %}
