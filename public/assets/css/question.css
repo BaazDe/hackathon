@@ -1,5 +1,5 @@
 .timer{
-    position: relative;
+    margin-bottom: 3em;
 }
 
 #progress, .underProgressBar{
@@ -16,4 +16,11 @@
     width:calc(100% - 10px);
     z-index: -1;
     border: 5px solid #8A0707;
+}
+
+
+
+.answers{
+    display: flex;
+    flex-wrap: wrap;
 }
