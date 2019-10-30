@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
     background-image: url("/assets/images/spooky.jpg");
     color: darkred;
@@ -10,22 +9,23 @@
 }
 
 #choices {
-    font-size: 30px;
+    font-size: 40px;
     display: block;
     flex-direction: column;
 }
 
 #choice_part1 {
-
+    padding: 10px;
     display: flex;
     justify-content: space-around;
 }
 
 #choice_part2 {
-
+    padding: 20px;
     display: flex;
     justify-content: space-around;
-=======
+}
+
 .timer{
     position: relative;
 }
@@ -44,5 +44,5 @@
     width:calc(100% - 10px);
     z-index: -1;
     border: 5px solid #8A0707;
->>>>>>> a16edf3eb90c783a1fbdef2427ef458dd99f9d75
+
 }

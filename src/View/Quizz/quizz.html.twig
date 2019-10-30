@@ -1,17 +1,16 @@
 {% extends 'layout.html.twig' %}
 
-<<<<<<< HEAD
+
 
 {% block title %}Quizz{% endblock %}
 
 {% block image %}<link rel="icon" href="/assets/images/spooky.jpg">{% endblock %}
 
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
-=======
+
 {% block stylesheet %}    <link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
 
 
->>>>>>> a16edf3eb90c783a1fbdef2427ef458dd99f9d75
+
 
 {% block content %}
     <section class ="timer">
@@ -23,14 +22,11 @@
 
 <div id="choices">
 
-    <div id="choice_part1">
-        <input type="button">Final destination</input>
-        <input type="button">Scream</p>
-    </div>
-
-    <div id="choice_part2">
-    <input type="button">Psychose</input>
-    <input type="button">Tchoupi</p>
+    <div>
+        <input type="button" value=" Final destination">
+        <input type="button" value=" Scream">
+        <input type="button" value=" Psychose">
+        <input type="button" value="Tchoupi">
     </div>
 </div>
 
@@ -38,13 +34,6 @@
 
 {% endblock %}
 
-
-
-
-{% block test %}
-
-
-{% endblock %}
 
 {% block test %}
     <h1>Movie list</h1>
