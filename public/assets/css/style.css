@@ -1,6 +1,26 @@
+@font-face {
+    font-family: 'honeydripperregular';
+    src: url('../fonts/honeydripper-webfont.woff2') format('woff2'),
+    url('../fonts/honeydripper-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'scare_armsregular';
+    src: url('../fonts/scarearms-webfont.woff2') format('woff2'),
+    url('../fonts/scarearms-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 * {
     margin:0;
     padding:0;
+
 }
 
 .index{
@@ -8,6 +28,7 @@
     width: 1440px;
     height: 1024px;
 }
+
 .background {
     position:fixed;
     height:100%;
