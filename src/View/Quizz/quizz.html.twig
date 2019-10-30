@@ -2,11 +2,18 @@
 
 {% block stylesheet %}{% endblock %}
 
-
 {% block content %}
     <section>
         <div id='progress' style='background:red; height:10px;'></div>
     </section>
+
+    <h1>Movie list</h1>
+
+    {% for movieByDate in moviesByDate %}
+    <p>{{ movieByDate.title }}</p>
+    {% endfor %}
+
+
 {% endblock %}
 
 {% block javascript %}
