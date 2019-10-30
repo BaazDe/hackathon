@@ -1,33 +1,35 @@
-@font-face {
-    font-family: 'honeydripperregular';
-    src: url('../fonts/honeydripper-webfont.woff2') format('woff2'),
-    url('../fonts/honeydripper-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+*{
+    margin: 0;
+    padding: 0;
+}
+header
+{
+    background-color: black;
 }
 
-@font-face {
-    font-family: 'scare_armsregular';
-    src: url('../fonts/scarearms-webfont.woff2') format('woff2'),
-    url('../fonts/scarearms-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+nav h1
+{
+    text-align: left;
+    font-size:25px;
+    color:red;
+    width:100%;
 }
 
-
-* {
-    margin:0;
-    padding:0;
-
+nav
+{
+    width:98%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    height:100%;
 }
 
-.index{
-    position: relative;
-    width: 1440px;
-    height: 1024px;
+body
+{
+    background-color: black;
 }
+
 
 .background {
     position:fixed;
