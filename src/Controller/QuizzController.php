@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 use App\Model\MoviesManager;
+use App\Model\ScoreManager;
 
 class QuizzController extends AbstractController
 {
@@ -14,9 +15,12 @@ class QuizzController extends AbstractController
         $moviesManager = new MoviesManager();
         $movies = $moviesManager->selectAll();
         $moviesByYear = $moviesManager->selectByYear(2013);
+        $score = new ScoreManager();
+        $score = $score->selectAll();
         return $this->twig->render('Quizz/quizz.html.twig', [
             'movies'=>$movies,
-            'moviesByYear'=>$moviesByYear
+            'moviesByYear'=>$moviesByYear,
+            'score'=>$score
         ]);
     }
 }
