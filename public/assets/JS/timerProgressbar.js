@@ -16,9 +16,9 @@ function started(duration) {
             width: progresBarWidth + 'px',
             transition: 'width, ease 3s'
         });
-        if (diff <= 0) {
+   if (diff <= 0) {
             window.setTimeout("location=('/home/index');",3000);
-        }
+
     }
 
     timer();

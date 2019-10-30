@@ -14,8 +14,24 @@ class QuizzController extends AbstractController
         $movies = $moviesManager->selectAll();
         $moviesByYear = $moviesManager->selectByYear(2013);
         return $this->twig->render('Quizz/quizz.html.twig', [
-            'movies'=>$movies,
-            'moviesByYear'=>$moviesByYear
+            'movies' => $movies,
+            'moviesByYear' => $moviesByYear
         ]);
+
+    }
+
+    public function quizzTitle()
+    {
+        //calling MoviesManager
+        $moviesManager = new MoviesManager();
+        $movies = $moviesManager->selectAll();
+        $moviesByYear = $moviesManager->selectByYear(2013);
+        return $this->twig->render('Quizz/quizzTitle.html.twig', [
+            'movies' => $movies,
+            'moviesByYear' => $moviesByYear
+        ]);
+
     }
 }
+
+
