@@ -25,10 +25,10 @@
 
             <div class="answers">
                 {% for randomMovie in randomMovies %}
-                <button>{{ randomMovie.director }}</button>
+                <button class="random">{{ randomMovie.director }}</button>
                 {% endfor %}
                 {% for randomWrongMovie in randomWrongMovies %}
-                <button>{{ randomWrongMovie.director }}</button>
+                <button class="random"> {{ randomWrongMovie.director }}</button>
                 {% endfor %}
 
             </div>
@@ -40,5 +40,6 @@
 
 {% block javascript %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../assets/JS/randomizeButtons.js"></script>
     <script src="../assets/JS/timerProgressbar.js"></script>
 {% endblock %}
