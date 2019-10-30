@@ -17,7 +17,6 @@ class QuizzController extends AbstractController
             'movies' => $movies,
             'moviesByYear' => $moviesByYear
         ]);
-
     }
 
     public function quizzTitle()
@@ -30,8 +29,5 @@ class QuizzController extends AbstractController
             'movies' => $movies,
             'moviesByYear' => $moviesByYear
         ]);
-
     }
 }
-
-
