@@ -1,4 +1,4 @@
-let TotalSeconds = 5;
+let TotalSeconds = 20;
 
 function started(duration) {
     let documentWidth = $(document).width();
@@ -14,7 +14,7 @@ function started(duration) {
 
         $('#progress').css({
             width: progresBarWidth + 'px',
-            transition: 'width, ease all 2s'
+            transition: 'width, ease 3s'
         });
 
         if (diff <= 0) {
