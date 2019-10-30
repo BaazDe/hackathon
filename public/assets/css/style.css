@@ -1,17 +1,10 @@
 *{
-    margin:0;
-    padding:0;
-}
-
-.index{
-    position: relative;
-    width: 1440px;
-    height: 1024px;
+    margin: 0;
+    padding: 0;
 }
 header
 {
     background-color: black;
-
 }
 
 nav h1
@@ -37,20 +30,11 @@ body
     background-color: black;
 }
 
-.background
-{
+
+.background {
     position:fixed;
     height:100%;
     width:100%;
     object-fit: cover;
     z-index: -1;
-}
-
-@font-face {
-    /*use this command for scare arms font : font-family: scare_armsregular, sans-serif ; */
-    font-family: 'scare_armsregular';
-    src: url('../fonts/scarearms.woff2') format('woff2'),
-    url('../fonts/scarearms.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 }
