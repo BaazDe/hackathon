@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block content %}
-
     <section class ="timer">
         <div id='progress'></div>
         <div class="underProgressBar"></div>
@@ -25,10 +24,10 @@
 
             <div class="answers">
                 {% for randomMovie in randomMovies %}
-                <button>{{ randomMovie.director }}</button>
+                   <a href="../../quizz/quizz/?id={{ randomMovie.id }}">{{ randomMovie.director }}</a>
                 {% endfor %}
                 {% for randomWrongMovie in randomWrongMovies %}
-                <button>{{ randomWrongMovie.director }}</button>
+                   <a href="#" onclick="checkQuestion()">{{ randomWrongMovie.director }}</a>
                 {% endfor %}
 
             </div>
@@ -39,6 +38,6 @@
 {% endblock %}
 
 {% block javascript %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../assets/JS/timerProgressbar.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../../assets/JS/timerProgressbar.js"></script>
 {% endblock %}

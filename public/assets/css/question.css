@@ -22,7 +22,7 @@
  #choices button {
      width: 40%;
      height: 50px;
-     font-family: 'scare_armsregular';
+     font-family: 'scare_armsregular', sans-serif;
      font-size: 30px;
  }
 

@@ -1,6 +1,11 @@
 let score = document.getElementById('score');
 score = parseInt(score.innerHTML);
-console.log(score);
+let goodResponse = document.getElementById('goodResponse');
+goodResponse = parseInt(score.innerHTML);
+let response = document.getElementById('response');
+response = parseInt(score.innerHTML);
+
+
 let TotalSeconds = 60 - 3 * score;
 if (TotalSeconds < 15) {
     TotalSeconds = 15;
@@ -33,12 +38,13 @@ function started(duration)
         if (diff <= 0) {
             window.setTimeout("location=('/defeat/defeat');", 500);
         }
-
     }
-
     timer();
     intervalSetted = setInterval(timer, 200);
 }
 
-
 started(TotalSeconds);
+
+function checkQuestion() {
+    diff = diff - 10;
+}
