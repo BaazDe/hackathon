@@ -15,7 +15,7 @@ class QuizzController extends AbstractController
         $movies = $moviesManager->selectAll();
         $moviesByDate = $moviesManager->selectByReleaseDate(2013);
         var_dump($moviesByDate);
-        return $this->twig->render('Quizz/quizz.html.twig',[
+        return $this->twig->render('Quizz/quizz.html.twig', [
             'movies'=>$movies,
             'moviesByDate'=>$moviesByDate
         ]);
