@@ -20,6 +20,12 @@
     margin: 0;
     padding: 0;
 }
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     background-color: black;
     opacity: 0.8;

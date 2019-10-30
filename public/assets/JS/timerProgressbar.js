@@ -18,8 +18,7 @@ function started(duration) {
         });
         /*if (diff <= 0) {
             window.setTimeout("location=('/home/index');",3000);
-        }
-         */
+        }*/
     }
 
     timer();
