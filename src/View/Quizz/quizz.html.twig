@@ -1,5 +1,6 @@
 {% extends 'layout.html.twig' %}
 
+
 {% block title %}Quizz{% endblock %}
 
 {% block image %}<link rel="icon" href="/assets/images/spooky.jpg">{% endblock %}
@@ -7,13 +8,35 @@
 {% block stylesheet %}<link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
 
 {% block content %}
-<section>
-    <h1>Which film belong to this image</h1>
+    <section>
+        <div id='progress' style='background:red; height:10px;'></div>
+    </section>
+<section id="questions">
+    <h1 id="title_question">Which film belong to this image</h1>
+
+<div id="choices">
+
+    <div id="choice_part1">
+        <input type="button">Final destination</input>
+        <input type="button">Scream</p>
+    </div>
+
+    <div id="choice_part2">
+    <input type="button">Psychose</input>
+    <input type="button">Tchoupi</p>
+    </div>
+</div>
+
 </section>
 
 {% endblock %}
 
-{% block content %}
+
+
+
+{% block test %}
+
+
     <h1>Movie list</h1>
 
     {% for movieByDate in moviesByDate %}
@@ -23,3 +46,8 @@
 
 {% endblock %}
 
+
+{% block javascript %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/JS/timerProgressbar.js"></script>
+{% endblock %}

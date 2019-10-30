@@ -1,0 +1,12 @@
+.index{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+}
+.background {
+    position:fixed;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    z-index: -1;
+}

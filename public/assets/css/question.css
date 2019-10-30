@@ -1,0 +1,27 @@
+* {
+    background-image: url("/assets/images/spooky.jpg");
+    color: darkred;
+}
+
+#title_question {
+    display: flex;
+    justify-content: center;
+}
+
+#choices {
+    font-size: 30px;
+    display: block;
+    flex-direction: column;
+}
+
+#choice_part1 {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+#choice_part2 {
+
+    display: flex;
+    justify-content: space-around;
+}

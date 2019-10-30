@@ -20,12 +20,12 @@ class MoviesManager extends AbstractManager
     }
 
 
+    public function selectByYear(int $year)
 
-    public function selectByReleaseDate(int $date)
     {
         // prepared request
-        $statement = $this->pdo->prepare("SELECT * FROM $this->table WHERE release_date=:date");
-        $statement->bindValue('date', $date, \PDO::PARAM_INT);
+        $statement = $this->pdo->prepare("SELECT * FROM $this->table WHERE year=:year");
+        $statement->bindValue('year', $year, \PDO::PARAM_INT);
         $statement->execute();
         return $statement->fetchAll();
     }
