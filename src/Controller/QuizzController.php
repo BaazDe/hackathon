@@ -14,9 +14,13 @@ class QuizzController extends AbstractController
         $moviesManager = new MoviesManager();
         $movies = $moviesManager->selectAll();
         $moviesByYear = $moviesManager->selectByYear(2013);
+        $randomMovie = $moviesManager->randomId();
+        $randomWrongMovie = $moviesManager->randomWrongId();
         return $this->twig->render('Quizz/quizz.html.twig', [
             'movies'=>$movies,
-            'moviesByYear'=>$moviesByYear
+            'moviesByYear'=>$moviesByYear,
+            'randomWrongMovies'=>$randomWrongMovie,
+            'randomMovies'=>$randomMovie
         ]);
     }
 
@@ -33,4 +37,6 @@ class QuizzController extends AbstractController
             'movies'=>$movies
         ]);
     }
+
+
 }
