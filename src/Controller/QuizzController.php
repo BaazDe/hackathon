@@ -25,10 +25,12 @@ class QuizzController extends AbstractController
         //calling MoviesManager
         $moviesManager = new MoviesManager();
         $movies = $moviesManager->selectAll();
-        $moviesByYear = $moviesManager->selectByYear(2013);
+        $moviesPosters = $moviesManager->randomPosters();
+        $moviesNotPosters = $moviesManager->randomWrongPosters();
         return $this->twig->render('Quizz/quizzTitle.html.twig', [
             'movies' => $movies,
-            'moviesByYear' => $moviesByYear
+            'moviesPosters' => $moviesPosters,
+            'moviesNotPosters' => $moviesNotPosters,
         ]);
     }
 
