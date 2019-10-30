@@ -17,7 +17,7 @@ function started(duration) {
             transition: 'width, ease 3s'
         });
         if (diff <= 0) {
-            window.setTimeout("location=('/home/index');",3000);
+            window.setTimeout("location=('/defeat/defeat');",3000);
         }
     }
 
