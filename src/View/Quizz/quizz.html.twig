@@ -4,9 +4,6 @@
 
 {% block title %}Quizz{% endblock %}
 
-{% block image %}<link rel="icon" href="/assets/images/spooky.jpg">{% endblock %}
-
-
 {% block stylesheet %}    <link rel="stylesheet" href="/assets/css/question.css">{% endblock %}
 
 
@@ -19,17 +16,21 @@
     </section>
 
 <section id="questions">
+
     <h1 id="title_question">Which film belong to this image</h1>
 
-<div id="choices">
+    <div id="choices">
+        <p>
+        <button>Final destination</button>
+        <button>Scream</button>
+        </p>
+        <p>
+        <button>Psychose</button>
+        <button>Tchoupi</button>
+        </p>
 
-    <div>
-        <input type="button" value=" Final destination">
-        <input type="button" value=" Scream">
-        <input type="button" value=" Psychose">
-        <input type="button" value="Tchoupi">
     </div>
-</div>
+
 
 </section>
 
@@ -40,7 +41,7 @@
 
 
 
-{% endblock %}
+
 
 
 
