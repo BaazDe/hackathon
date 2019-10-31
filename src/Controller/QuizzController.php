@@ -72,7 +72,7 @@ class QuizzController extends AbstractController
         $moviesManager = new MoviesManager();
         $movies = $moviesManager->selectAll();
         $randomMovie = $moviesManager->randomId();
-        $randomWrongMovie = $moviesManager->randomWrongId();
+        $randomWrongMovie = $moviesManager->randomWrongYear();
         //randomizing page
         $randPage = random_int(1, 4);
         $score = new ScoreManager();
