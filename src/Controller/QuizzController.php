@@ -20,7 +20,6 @@ class QuizzController extends AbstractController
         return $parts;
     }
 
-
     public function quizz1()
     {
         //calling MoviesManager
@@ -40,8 +39,6 @@ class QuizzController extends AbstractController
             'path'=> ['random'=>"quizz$randPage"]
         ]);
     }
-
-
 
     public function quizz2()
     {

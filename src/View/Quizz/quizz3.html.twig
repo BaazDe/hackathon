@@ -22,7 +22,7 @@
                 {% endfor %}
             </div>
 
-            <div class="answers">
+            <div class="answers" id="choices">
                 {% for randomMovie in randomMovies %}
                     <button class="random" onclick="window.location.href='{{ path.random }}'">{{ randomMovie.year }}</button>
                 {% endfor %}
