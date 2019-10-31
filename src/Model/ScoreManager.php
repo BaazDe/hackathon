@@ -27,12 +27,12 @@ class ScoreManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-    public function addOne(): array
+    public function addOne(): object
     {
-        return $this->pdo->query('UPDATE score set score = score + 1 WHERE id = 1')->fetchAll();
+        return $this->pdo->query("UPDATE Score set score = score + 1 WHERE id = 1");
     }
-    public function reset(): array
+    public function reset(): object
     {
-        return $this->pdo->query('UPDATE score set score = 0 WHERE id = 1')->fetchAll();
+        return $this->pdo->query("UPDATE Score set score = 0");
     }
 }
