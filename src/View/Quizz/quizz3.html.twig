@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/quizz3.css">
+    <link rel="stylesheet" href="/assets/css/quizz2.css">
 {% endblock %}
 
 {% block content %}
@@ -13,31 +13,33 @@
     <div class="content">
 
         <div class="question">
-            <p>what year was the film released ?</p>
+            <p>What year was the film released?</p>
+        </div>
+        <div class="answering">
             <div class="poster">
                 {% for randomMovie in randomMovies %}
                     <img src="{{randomMovie.posterUrl}}" alt="">
                 {% endfor %}
             </div>
-        </div>
 
-        <div class="answering">
             <div class="answers">
                 {% for randomMovie in randomMovies %}
-                    <button>{{ randomMovie.year }}</button>
+                    <button class="random" onclick="window.location.href='{{ path.random }}'">{{ randomMovie.year }}</button>
                 {% endfor %}
+
                 {% for randomWrongMovie in randomWrongMovies %}
-                    <button>{{ randomWrongMovie.year }}</button>
+                    <button id = "{{randomWrongMovie.id }}" onclick="checkQuestion(this.id)" class="random">{{ randomWrongMovie.year }}</button>
                 {% endfor %}
 
             </div>
         </div>
-
+        <p id="score">{{ score[0]['score'] }}</p>
     </div>
 
 {% endblock %}
 
 {% block javascript %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../assets/JS/timerProgressbar.js"></script>
+    <!--<script src="/assets/JS/randomizeButtons.js"></script>-->
+    <script src="/assets/JS/timerProgressbar.js"></script>
 {% endblock %}

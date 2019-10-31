@@ -17,7 +17,10 @@ class QuizzController extends AbstractController
         if (empty($parts)) {
             return '/';
         }
+<<<<<<< HEAD
         var_dump($parts);
+=======
+>>>>>>> 0679047b4479a208d6afa38f640b79a1923576e6
         return $parts;
     }
 
@@ -65,7 +68,10 @@ class QuizzController extends AbstractController
             'movies'=>$movies,
             'score'=>$score,
             'path'=> ['random'=>"quizz$randPage"]
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0679047b4479a208d6afa38f640b79a1923576e6
         ]);
     }
     public function quizz3()
@@ -74,7 +80,11 @@ class QuizzController extends AbstractController
         $moviesManager = new MoviesManager();
         $movies = $moviesManager->selectAll();
         $randomMovie = $moviesManager->randomId();
+<<<<<<< HEAD
         $randomWrongMovie = $moviesManager->randomWrongId();
+=======
+        $randomWrongMovie = $moviesManager->randomWrongYear();
+>>>>>>> 0679047b4479a208d6afa38f640b79a1923576e6
         //randomizing page
         $randPage = random_int(1, 4);
         $score = new ScoreManager();

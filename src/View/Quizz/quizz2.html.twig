@@ -24,21 +24,23 @@
 
             <div id ="choices" class="answers">
                 {% for randomMovie in randomMovies %}
-                    <a href="../../quizz/quizz2/?id={{ randomMovie.id }}" class="random">{{ randomMovie.director }}</a>
+                    <button class="random" onclick="window.location.href='{{ path.random }}'">{{ randomMovie.director }}</button>
                 {% endfor %}
                 {% for randomWrongMovie in randomWrongMovies %}
-                    <a id = "{{ randomWrongMovie.id }}"href="#" onclick="checkQuestion(this.id)" class="random"> {{ randomWrongMovie.director }}</a>
+                    <button id = "{{randomWrongMovie.id }}" onclick="checkQuestion(this.id)" class="random"> {{ randomWrongMovie.director }}</button>
                 {% endfor %}
 
             </div>
         </div>
+
         <p id="score">{{ score[0]['score'] }}</p>
+
     </div>
 
 {% endblock %}
 
 {% block javascript %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--<script src="/assets/JS/randomizeButtons.js"></script>-->
     <script src="/assets/JS/timerProgressbar.js"></script>
-        <script src="../assets/JS/randomizeButtons.js"></script>
 {% endblock %}

@@ -21,6 +21,10 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        //randomizing page
+        $randPage = random_int(1, 3);
+        return $this->twig->render('Home/index.html.twig', [
+            'path'=> ['random'=>"quizz$randPage"]
+        ]);
     }
 }

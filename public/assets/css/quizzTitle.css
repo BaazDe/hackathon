@@ -1,12 +1,46 @@
-p{
-    font-family: honeydripperregular;
-    font-size: 50px;
-    color: #e00b0b;
-    text-align: center;
-    margin-top: 10%;
+/* TIMER */
+.timer{
+    margin-bottom: 3em;
 }
 
-.buttonEffect{
+#progress, .underProgressBar{
+    position: absolute;
+    height:30px;
+}
+
+#progress{
+    background:#8A0707;
+}
+.underProgressBar {
+    height:25px;
+    background: rgba(255,255,255,0);
+    width:calc(100% - 10px);
+    z-index: -1;
+    border: 5px solid #8A0707;
+}
+/* END TIMER */
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.question{
+    background-color: rgba(0,0,0,0.9);
+    padding: 1em;
+    width: 80%;
+    margin-bottom: 1em;
+}
+.question p{
+    color: #8A0707;
+    font-family: honeydripperregular, sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+button{
     height: 300px;
     border: none;
     outline: none;
@@ -18,7 +52,7 @@ p{
     border-radius: 10px;
 }
 
-.buttonEffect:before {
+button:before {
     content: '';
     background: linear-gradient(#e00b0b, #e90101);
     position: absolute;
@@ -34,19 +68,19 @@ p{
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
 }
-.buttonEffect:active {
+button:active {
     color: #000
 }
 
-.buttonEffect:active:after {
+button:active:after {
     background: transparent;
 }
 
-.buttonEffect:hover:before {
+button:hover:before {
     opacity: 1;
 }
 
-.buttonEffect:after {
+button:after {
     z-index: -1;
     content: '';
     position: absolute;
@@ -64,15 +98,12 @@ p{
     100% { background-position: 0 0; }
 }
 
-section{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5%;
-    justify-content: space-evenly;
-
-}
 
 img{
     width: 200px;
    ;
+}
+
+#score{
+    display: none;
 }

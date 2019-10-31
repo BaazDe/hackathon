@@ -1,3 +1,4 @@
+/* TIMER */
 .timer{
     margin-bottom: 3em;
 }
@@ -6,6 +7,7 @@
     position: absolute;
     height:30px;
 }
+
 #progress{
     background:#8A0707;
 }
@@ -16,7 +18,13 @@
     z-index: -1;
     border: 5px solid #8A0707;
 }
+/* END TIMER */
 
+button:hover{
+    cursor: pointer;
+}
+
+/* QUESTION BLOCK */
 .content{
     display: flex;
     flex-direction: column;
@@ -24,46 +32,59 @@
     justify-content: space-around;
 }
 .question{
-    padding: 1%;
-    width: 60%;
+    background-color: rgba(0,0,0,0.9);
+    padding: 1em;
+    width: 80%;
+    margin-bottom: 1em;
 }
 .question p{
-    color: darkred ;
+    color: #8A0707;
     font-family: honeydripperregular, sans-serif;
     font-size: 2em;
     text-align: center;
 }
 
+/* END QUESTION BLOCK */
+
 .answering{
     display: flex;
     flex-wrap: nowrap;
-    height: 60%;
-    width: 60%;
+    height: 60vh;
+    width: 80%;
     justify-content: space-around;
+    flex-direction: row-reverse;
+
 }
 
+/* POSTER BLOCK */
 
-.poster{
-    padding: 1%;
-    margin: auto;
-    width: 37%;
+.poster img{
+    height: 60vh;
+    border-radius: 10px;
 }
 
+/* END POSTER BLOCK */
 
+/* BUTTONS ANSWER */
 .answers{
     display: flex;
-    flex-direction: row-reverse;
-    width: 37%;
-
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    text-align: center;
 }
 
 .answers button{
-    background: black;
-    color: darkred;
+    background: #8A0707;
+    border-radius: 5px;
+    color: black;
     font-family: honeydripperregular, sans-serif;
     font-size: 2em;
-    padding: 0.1%;
-    margin: 2%;
-
+    padding: 0.2em 0;
+    border: 1px solid white;
 }
 
+/* END BUTTONS ANSWER */
+#score{
+    display: none;
+}

@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/quizzTitle.css">
+{% endblock %}
+{% block content %}
+    <section class ="timer">
+        <div id='progress'></div>
+        <div class="underProgressBar"></div>
+    </section>
+    <div class="content">
+    <div class="question">
+        {% for moviesPoster  in moviesPosters %}
+            <p>Which poster does this title: "{{moviesPoster.title}}" correspond to ?</p>
+        {% endfor %}
+    </div>
+
+   <div>
+       <div class="PosterValid">
+           {% for moviesPoster in moviesPosters %}
+          <button class="button" onclick="window.location.href='{{ path.random }}'"><img src="{{ moviesPoster.posterUrl}}"></button>
+            {% endfor %}
+
+           {% for moviesNotPoster in moviesNotPosters %}
+          <button id = "{{randomWrongMovie.id }}" onclick="checkQuestion(this.id)" class="button"><img src="{{ moviesNotPoster.posterUrl}}"></button>
+            {% endfor %}
+       </div>
+   </div>
+        <p id="score">{{ score[0]['score'] }}</p>
+    </div>
+{% endblock %}
+
+
+{% block javascript %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="/assets/JS/randomizeButtons.js"></script>-->
+    <script src="/assets/JS/timerProgressbar.js"></script>
+{% endblock %}
+

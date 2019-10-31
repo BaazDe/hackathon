@@ -40,7 +40,15 @@ class MoviesManager extends AbstractManager
     public function randomWrongId()
     {
         // prepared request
-        $statement = $this->pdo->prepare("SELECT * FROM $this->table ORDER BY RAND() LIMIT 3");
+        $statement = $this->pdo->prepare("SELECT DISTINCT * FROM $this->table ORDER BY RAND() LIMIT 3");
+        $statement->execute();
+        return $statement->fetchAll();
+    }
+
+    public function randomWrongYear()
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("SELECT DISTINCT year FROM $this->table ORDER BY RAND() LIMIT 3");
         $statement->execute();
         return $statement->fetchAll();
     }
