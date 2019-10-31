@@ -15,8 +15,6 @@
 </section>
 
 <div class="content">
-    <p id="score">{{score[0]['score']}}</p>
-
     <div class="question">
         <p>Which film belong to this image?</p>
     </div>
@@ -28,7 +26,9 @@
             {% endfor %}
         </div>
 
-        <div class="answers" id="choices">
+
+        <div id = "choices" class="answers">
+
             {% for randomMovie in randomMovies %}
             <button class="random" onclick="window.location.href='{{ path.random }}'">{{ randomMovie.title }}</button>
             {% endfor %}

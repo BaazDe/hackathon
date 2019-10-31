@@ -1,9 +1,6 @@
 let score = document.getElementById('score');
 score = parseInt(score.innerHTML);
-let goodResponse = document.getElementById('goodResponse');
-goodResponse = parseInt(score.innerHTML);
-let response = document.getElementById('response');
-response = parseInt(score.innerHTML);
+
 
 let wrongAnswer = 0;
 
@@ -34,6 +31,7 @@ function started(duration)
             window.setTimeout("location=('/defeat/defeat');", 500);
         }
 
+
         if (diff <= 5) {
             let choices = document.getElementById('choices');
             choices.style.animation = 'shake 0.5s';
@@ -44,14 +42,14 @@ function started(duration)
     }
     let diff = timer;
     timer();
-    intervalSetted = setInterval(timer, 200);
+    intervalSetted = setInterval(timer, 0);
 }
 
 started(TotalSeconds);
 
 function checkQuestion($id)
 {
-    wrongAnswer = wrongAnswer + 15;
+    wrongAnswer = wrongAnswer + 10;
     let grey = document.getElementById($id);
     grey.style.backgroundColor = 'black';
 }
