@@ -10,11 +10,11 @@
     <div class="content">
     <div class="question">
         {% for moviesPoster  in moviesPosters %}
-            <p>Which poster does this title: " {{moviesPoster.title}} " correspond to ?</p>
+            <p>Which poster does this title: "{{moviesPoster.title}}" correspond to ?</p>
         {% endfor %}
     </div>
 
-   <section>
+   <div>
        <div class="PosterValid">
            {% for moviesPoster in moviesPosters %}
           <button class="button" onclick="window.location.href='{{ path.random }}'"><img src="{{ moviesPoster.posterUrl}}"></button>
@@ -24,7 +24,7 @@
           <button id = "{{randomWrongMovie.id }}" onclick="checkQuestion(this.id)" class="button"><img src="{{ moviesNotPoster.posterUrl}}"></button>
             {% endfor %}
        </div>
-   </section>
+   </div>
         <p id="score">{{ score[0]['score'] }}</p>
     </div>
 {% endblock %}
