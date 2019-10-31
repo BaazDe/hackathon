@@ -27,6 +27,10 @@ function started(duration)
             transition: 'width, ease 1s'
         });
 
+        if (diff <= 0) {
+            window.setTimeout("location=('/defeat/defeat');", 500);
+        }
+
 
         if (diff <= 5) {
             let choices = document.getElementById('choices');
@@ -34,9 +38,7 @@ function started(duration)
             choices.style.animationIterationCount = 'infinite';
         }
 
-        if (diff <= 0) {
-            window.setTimeout("location=('/defeat/defeat');", 500);
-        }
+
     }
     let diff = timer;
     timer();
