@@ -55,6 +55,10 @@ class QuizzController extends AbstractController
         $randPage = random_int(1, 4);
         $score = new ScoreManager();
         $score = $score->selectAll();
+        if (isset($_GET['id'])) {
+            $incrementation = new ScoreManager();
+            $incrementation = $incrementation->addOne();
+        }
         return $this->twig->render('Quizz/quizz2.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,

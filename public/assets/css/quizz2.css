@@ -70,15 +70,17 @@ button:hover{
     flex-direction: column;
     justify-content: space-evenly;
     width: 50%;
+    text-align: center;
 }
 
-.answers button{
+.answers a{
     background: #8A0707;
     border-radius: 5px;
     color: black;
     font-family: honeydripperregular, sans-serif;
     font-size: 2em;
     padding: 0.2em 0;
+    border: 1px solid white;
 }
 
 /* END BUTTONS ANSWER */

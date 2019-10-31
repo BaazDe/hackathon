@@ -5,12 +5,11 @@
 {% endblock %}
 
 {% block content %}
-
     <section class ="timer">
         <div id='progress'></div>
         <div class="underProgressBar"></div>
     </section>
-    <div class="content">
+    <div  class="content">
 
         <div class="question">
             <p>Who directed this movie?</p>
@@ -23,16 +22,19 @@
                 {% endfor %}
             </div>
 
-            <div class="answers">
+            <div id ="choices" class="answers">
                 {% for randomMovie in randomMovies %}
                     <button class="random" onclick="window.location.href='{{ path.random }}'">{{ randomMovie.director }}</button>
                 {% endfor %}
                 {% for randomWrongMovie in randomWrongMovies %}
-                <button class="random"> {{ randomWrongMovie.director }}</button>
+                    <a id = "{{ randomWrongMovie.id }}"href="#" onclick="checkQuestion(this.id)" class="random"> {{ randomWrongMovie.director }}</a>
                 {% endfor %}
 
             </div>
         </div>
+
+        <p id="score">{{ score[0]['score'] }}</p>
+
     </div>
 
 {% endblock %}
