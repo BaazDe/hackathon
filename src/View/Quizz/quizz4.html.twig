@@ -3,21 +3,36 @@
     <link rel="stylesheet" href="/assets/css/quizzTitle.css">
 {% endblock %}
 {% block content %}
-    {% for moviesPoster  in moviesPosters %}
-        <p>Which poster does this title: " {{moviesPoster.title}} " correspond to ?</p>
-    {% endfor %}
+    <section class ="timer">
+        <div id='progress'></div>
+        <div class="underProgressBar"></div>
+    </section>
+    <div class="content">
+    <div class="question">
+        {% for moviesPoster  in moviesPosters %}
+            <p>Which poster does this title: " {{moviesPoster.title}} " correspond to ?</p>
+        {% endfor %}
+    </div>
+
    <section>
        <div class="PosterValid">
            {% for moviesPoster in moviesPosters %}
-          <button class="buttonEffect" onclick="window.location.href='{{ path.random }}'"><img src="{{ moviesPoster.posterUrl}}"></button>
+          <button class="button" onclick="window.location.href='{{ path.random }}'"><img src="{{ moviesPoster.posterUrl}}"></button>
             {% endfor %}
-       </div>
 
-       <div class="PosterFalse">
            {% for moviesNotPoster in moviesNotPosters %}
-          <button class="buttonEffect"><img src="{{ moviesNotPoster.posterUrl}}"></button>
+          <button id = "{{randomWrongMovie.id }}" onclick="checkQuestion(this.id)" class="button"><img src="{{ moviesNotPoster.posterUrl}}"></button>
             {% endfor %}
        </div>
    </section>
+        <p id="score">{{ score[0]['score'] }}</p>
+    </div>
+{% endblock %}
+
+
+{% block javascript %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="/assets/JS/randomizeButtons.js"></script>-->
+    <script src="/assets/JS/timerProgressbar.js"></script>
 {% endblock %}
 

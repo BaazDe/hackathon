@@ -73,7 +73,7 @@ button:hover{
     text-align: center;
 }
 
-.answers a{
+.answers button{
     background: #8A0707;
     border-radius: 5px;
     color: black;
@@ -84,3 +84,7 @@ button:hover{
 }
 
 /* END BUTTONS ANSWER */
+
+#score{
+    display: none;
+}

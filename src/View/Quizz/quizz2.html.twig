@@ -27,7 +27,7 @@
                     <button class="random" onclick="window.location.href='{{ path.random }}'">{{ randomMovie.director }}</button>
                 {% endfor %}
                 {% for randomWrongMovie in randomWrongMovies %}
-                    <a id = "{{ randomWrongMovie.id }}"href="#" onclick="checkQuestion(this.id)" class="random"> {{ randomWrongMovie.director }}</a>
+                    <button id = "{{randomWrongMovie.id }}" onclick="checkQuestion(this.id)" class="random"> {{ randomWrongMovie.director }}</button>
                 {% endfor %}
 
             </div>

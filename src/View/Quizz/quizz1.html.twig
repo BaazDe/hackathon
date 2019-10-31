@@ -13,11 +13,8 @@
     <div class="underProgressBar"></div>
 </section>
 
-
-
 <div class="content">
-    <p id="score">{{ score[0]['score'] }}</p>
-
+    <p id="score">{{score[0]['score']}}</p>
 
     <div class="question">
         <p>Which film belong to this image?</p>
@@ -36,10 +33,12 @@
             {% endfor %}
 
             {% for randomWrongMovie in randomWrongMovies %}
-                <button class="random"> {{ randomWrongMovie.title }}</button>
+                <button id = "{{randomWrongMovie.id}}" onclick="checkQuestion(this.id)" class="random">{{randomWrongMovie.title}}</button>
             {% endfor %}
         </div>
     </div>
+    <p id="score">{{ score[0]['score'] }}</p>
+</div>
 
 {% endblock %}
 {% block javascript %}
