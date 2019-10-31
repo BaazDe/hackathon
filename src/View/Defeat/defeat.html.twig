@@ -1,5 +1,15 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}  <link rel="stylesheet" href="/assets/css/defeat.css">{% endblock %}
 {% block image %}
     /assets/images/defeat.jpeg
+{% endblock %}
+
+{% block content %}
+    <section class="message">
+        <p>Oh oh!!! Timer is over !!!</p>
+    </section>
+    <section class="retry">
+        <a href="../quizz/quizz"><button>RETRY</button></a>
+    </section>
 {% endblock %}
