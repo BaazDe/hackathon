@@ -41,6 +41,10 @@ function started(duration)
             choices.style.animation = 'shake 0.5s';
             choices.style.animationIterationCount = 'infinite';
         }
+
+        if (diff <= 0) {
+            window.setTimeout("location=('/defeat/defeat');", 500);
+        }
     }
     let diff = timer;
     timer();

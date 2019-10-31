@@ -52,6 +52,7 @@ button:hover{
     height: 60vh;
     width: 80%;
     justify-content: space-around;
+    flex-direction: row-reverse;
 
 }
 
@@ -84,7 +85,6 @@ button:hover{
 }
 
 /* END BUTTONS ANSWER */
-
 #score{
     display: none;
 }
