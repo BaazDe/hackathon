@@ -37,6 +37,4 @@ class QuizzController extends AbstractController
             'movies'=>$movies
         ]);
     }
-
-
 }
