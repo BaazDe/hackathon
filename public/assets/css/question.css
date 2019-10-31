@@ -36,11 +36,11 @@
      justify-content: center;
      margin: 50px 0px;
      background-color: darkred;
-     width: 400px;
-     height: 60px;
+     width: 40%;
+     height: 50px;
+     font-family: 'scare_armsregular', sans-serif;
      border: none;
      border-radius: 15px;
-     font-family: 'scare_armsregular';
      font-size: 30px;
  }
 

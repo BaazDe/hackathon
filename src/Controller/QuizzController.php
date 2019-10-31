@@ -65,6 +65,7 @@ class QuizzController extends AbstractController
             'movies'=>$movies,
             'score'=>$score,
             'path'=> ['random'=>"quizz$randPage"]
+
         ]);
     }
     public function quizz3()

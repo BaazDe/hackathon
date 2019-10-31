@@ -8,6 +8,8 @@
 
 namespace App\Controller;
 
+use App\Model\ScoreManager;
+
 class DefeatController extends AbstractController
 {
 
@@ -21,6 +23,8 @@ class DefeatController extends AbstractController
      */
     public function defeat()
     {
+        $defeat = new ScoreManager();
+        $defeat = $defeat->reset();
         return $this->twig->render('Defeat/defeat.html.twig');
     }
 }
