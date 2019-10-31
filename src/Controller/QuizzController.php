@@ -32,7 +32,7 @@ class QuizzController extends AbstractController
         $score = new ScoreManager();
         $score = $score->selectAll();
         //randomizing page
-        $randPage = random_int(1,3);
+        $randPage = random_int(1, 3);
         return $this->twig->render('Quizz/quizz1.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,
@@ -50,7 +50,7 @@ class QuizzController extends AbstractController
         $randomMovie = $moviesManager->randomId();
         $randomWrongMovie = $moviesManager->randomWrongId();
         //randomizing page
-        $randPage = random_int(1,3);
+        $randPage = random_int(1, 3);
         return $this->twig->render('Quizz/quizz2.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,
@@ -66,7 +66,7 @@ class QuizzController extends AbstractController
         $randomMovie = $moviesManager->randomId();
         $randomWrongMovie = $moviesManager->randomWrongId();
         //randomizing page
-        $randPage = random_int(1,3);
+        $randPage = random_int(1, 3);
         return $this->twig->render('Quizz/quizz3.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,
