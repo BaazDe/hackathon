@@ -28,12 +28,13 @@
                 {% endfor %}
 
                 {% for randomWrongMovie in randomWrongMovies %}
-                    <button id = "{{randomWrongMovie.id }}" onclick="checkQuestion(this.id)" class="random">{{ randomWrongMovie.year }}</button>
+                    <button id = "{{randomWrongMovie.year }}" onclick="checkQuestion(this.id)" class="random"> {{ randomWrongMovie.year }}</button>
                 {% endfor %}
-
+r
             </div>
         </div>
         <p id="score">{{ score[0]['score'] }}</p>
+        <audio id="audio" src="../assets/rireSatanique.mp3"></audio>
     </div>
 
 {% endblock %}

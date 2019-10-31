@@ -22,12 +22,13 @@
             {% endfor %}
 
            {% for moviesNotPoster in moviesNotPosters %}
-              <button id = "{{randomWrongMovie.id }}" onclick="checkQuestion(this.id)" class="button"><img src="{{ moviesNotPoster.posterUrl}}"></button>
+              <button id = "{{randomWrongMovie.id }}" class="button"><img src="{{ moviesNotPoster.posterUrl}}"></button>
             {% endfor %}
        </div>
    </section>
         <p id="score">{{ score[0]['score'] }}</p>
-{% endblock %}
+        <audio id="audio" src="../assets/rireSatanique.mp3"></audio>
+        {% endblock %}
 
 
 {% block javascript %}

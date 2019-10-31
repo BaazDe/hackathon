@@ -50,5 +50,8 @@ function checkQuestion($id)
     wrongAnswer = wrongAnswer + 10;
     let grey = document.getElementById($id);
     grey.style.backgroundColor = 'black';
+       let audio = document.getElementById("audio");
+       audio.play();
+       audio.volume= '0.1';
 }
 
