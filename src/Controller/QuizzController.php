@@ -20,7 +20,8 @@ class QuizzController extends AbstractController
         return $this->twig->render('Quizz/quizz.html.twig', [
 
             'movies' => $movies,
-            'moviesByYear' => $moviesByYear
+            'moviesByYear' => $moviesByYear,
+            'score'=>$score
         ]);
     }
 
@@ -31,6 +32,10 @@ class QuizzController extends AbstractController
         $movies = $moviesManager->selectAll();
         $moviesPosters = $moviesManager->randomPosters();
         $moviesNotPosters = $moviesManager->randomWrongPosters();
+        if (isset($_GET['id'])) {
+            $incrementation = new ScoreManager();
+            $incrementation = $incrementation->addOne();
+        }
         $score = new ScoreManager();
         $score = $score->selectAll();
         return $this->twig->render('Quizz/quizzTitle.html.twig', [
@@ -49,12 +54,12 @@ class QuizzController extends AbstractController
         $movies = $moviesManager->selectAll();
         $randomMovie = $moviesManager->randomId();
         $randomWrongMovie = $moviesManager->randomWrongId();
-        $score = new ScoreManager();
-        $score = $score->selectAll();
         if (isset($_GET['id'])) {
             $incrementation = new ScoreManager();
             $incrementation = $incrementation->addOne();
         }
+        $score = new ScoreManager();
+        $score = $score->selectAll();
         return $this->twig->render('Quizz/quizz2.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,
@@ -69,10 +74,18 @@ class QuizzController extends AbstractController
         $movies = $moviesManager->selectAll();
         $randomMovie = $moviesManager->randomId();
         $randomWrongMovie = $moviesManager->randomWrongId();
+        if (isset($_GET['id'])) {
+            $incrementation = new ScoreManager();
+            $incrementation = $incrementation->addOne();
+        }
+        $score = new ScoreManager();
+        $score = $score->selectAll();
+
         return $this->twig->render('Quizz/quizz3.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,
-            'movies'=>$movies
+            'movies'=>$movies,
+            'score'=>$score
         ]);
     }
 }
