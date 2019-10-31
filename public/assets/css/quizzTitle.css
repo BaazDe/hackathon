@@ -98,12 +98,6 @@ button:after {
     100% { background-position: 0 0; }
 }
 
-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-}
 
 img{
     width: 200px;

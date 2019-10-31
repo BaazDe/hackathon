@@ -37,7 +37,6 @@ function started(duration)
         if (diff <= 0) {
             window.setTimeout("location=('/defeat/defeat');", 500);
         }
-        console.log(diff)
     }
     let diff = timer;
     timer();
