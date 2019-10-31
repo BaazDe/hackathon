@@ -30,20 +30,21 @@ function started(duration)
             transition: 'width, ease 1s'
         });
 
+
+        if (diff <= 0) {
+            window.setTimeout("location=('/home/index');",3000);
+        }
+
+
         if (diff <= 5) {
             let choices = document.getElementById('choices');
             choices.style.animation = 'shake 0.5s';
             choices.style.animationIterationCount = 'infinite';
         }
-        if (diff <= 1) {
-            window.setTimeout("location=('/defeat/defeat');", 500);
-        }
-        return diff;
     }
     let diff = timer;
     timer();
     intervalSetted = setInterval(timer, 200);
-    return diff;
 }
 
 started(TotalSeconds);
