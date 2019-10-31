@@ -28,6 +28,8 @@ class QuizzController extends AbstractController
         $movies = $moviesManager->selectAll();
         $randomMovie = $moviesManager->randomId();
         $randomWrongMovie = $moviesManager->randomWrongId();
+        $incrementation = new ScoreManager();
+        $incrementation = $incrementation->addOne();
         $score = new ScoreManager();
         $score = $score->selectAll();
         //randomizing page
@@ -52,12 +54,10 @@ class QuizzController extends AbstractController
         $randomWrongMovie = $moviesManager->randomWrongId();
         //randomizing page
         $randPage = random_int(1, 4);
+        $incrementation = new ScoreManager();
+        $incrementation = $incrementation->addOne();
         $score = new ScoreManager();
         $score = $score->selectAll();
-        if (isset($_GET['id'])) {
-            $incrementation = new ScoreManager();
-            $incrementation = $incrementation->addOne();
-        }
         return $this->twig->render('Quizz/quizz2.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,
@@ -75,6 +75,8 @@ class QuizzController extends AbstractController
         $randomWrongMovie = $moviesManager->randomWrongYear();
         //randomizing page
         $randPage = random_int(1, 4);
+        $incrementation = new ScoreManager();
+        $incrementation = $incrementation->addOne();
         $score = new ScoreManager();
         $score = $score->selectAll();
         return $this->twig->render('Quizz/quizz3.html.twig', [
@@ -95,6 +97,8 @@ class QuizzController extends AbstractController
         $moviesNotPosters = $moviesManager->randomWrongPosters();
         //randomizing page
         $randPage = random_int(1, 4);
+        $incrementation = new ScoreManager();
+        $incrementation = $incrementation->addOne();
         $score = new ScoreManager();
         $score = $score->selectAll();
         return $this->twig->render('Quizz/quizz4.html.twig', [

@@ -33,6 +33,6 @@ class ScoreManager extends AbstractManager
     }
     public function reset(): object
     {
-        return $this->pdo->query("UPDATE Score set score = 0");
+        return $this->pdo->query("UPDATE Score set score = -1");
     }
 }

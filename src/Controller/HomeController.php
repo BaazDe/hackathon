@@ -8,6 +8,8 @@
 
 namespace App\Controller;
 
+use App\Model\ScoreManager;
+
 class HomeController extends AbstractController
 {
 
@@ -22,6 +24,8 @@ class HomeController extends AbstractController
     public function index()
     {
         //randomizing page
+        $defeat = new ScoreManager();
+        $defeat = $defeat->reset();
         $randPage = random_int(1, 3);
         return $this->twig->render('Home/index.html.twig', [
             'path'=> ['random'=>"quizz$randPage"]

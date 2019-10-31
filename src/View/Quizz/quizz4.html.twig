@@ -15,7 +15,7 @@
     </div>
 
    <section>
-       <div class="PosterValid">
+       <div id = "choices" class="PosterValid">
            {% for moviesPoster in moviesPosters %}
           <button class="button" onclick="window.location.href='{{ path.random }}'"><img src="{{ moviesPoster.posterUrl}}"></button>
             {% endfor %}
