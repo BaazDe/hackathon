@@ -1,0 +1,78 @@
+p{
+    font-family: honeydripperregular;
+    font-size: 50px;
+    color: #e00b0b;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.buttonEffect{
+    height: 300px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.buttonEffect:before {
+    content: '';
+    background: linear-gradient(#e00b0b, #e90101);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.buttonEffect:active {
+    color: #000
+}
+
+.buttonEffect:active:after {
+    background: transparent;
+}
+
+.buttonEffect:hover:before {
+    opacity: 1;
+}
+
+.buttonEffect:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    justify-content: space-evenly;
+
+}
+
+img{
+    width: 200px;
+   ;
+}

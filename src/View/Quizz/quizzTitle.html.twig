@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/quizzTitle.css">
+{% endblock %}
+{% block content %}
+    {% for moviesPoster  in moviesPosters %}
+        <p>Which poster does this title: " {{moviesPoster.title}} " correspond to ?</p>
+    {% endfor %}
+   <section>
+       <div class="PosterValid">
+           {% for moviesPoster in moviesPosters %}
+          <button class="buttonEffect"><img src="{{ moviesPoster.posterUrl}}"></button>
+            {% endfor %}
+       </div>
+
+       <div class="PosterFalse">
+           {% for moviesNotPoster in moviesNotPosters %}
+          <button class="buttonEffect"><img src="{{ moviesNotPoster.posterUrl}}"></button>
+            {% endfor %}
+       </div>
+   </section>
+{% endblock %}
+
