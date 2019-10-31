@@ -44,4 +44,21 @@ class MoviesManager extends AbstractManager
         $statement->execute();
         return $statement->fetchAll();
     }
+
+    public function randomPosters()
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("SELECT * FROM $this->table ORDER BY RAND() LIMIT 1");
+        $statement->execute();
+        return $statement->fetchAll();
+    }
+
+
+    public function randomWrongPosters()
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("SELECT * FROM $this->table ORDER BY RAND() LIMIT 3");
+        $statement->execute();
+        return $statement->fetchAll();
+    }
 }

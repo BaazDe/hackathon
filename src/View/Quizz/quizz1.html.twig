@@ -3,7 +3,7 @@
 
 {% block title %}Quizz{% endblock %}
 
-{% block stylesheet %}    <link rel="stylesheet" href="/assets/css/quizz2.css">{% endblock %}
+{% block stylesheet %}    <link rel="stylesheet" href="/assets/css/quizz1.css">{% endblock %}
 
 
 {% block content %}
@@ -32,18 +32,12 @@
 
         <div class="answers">
             {% for randomMovie in randomMovies %}
-
-
             <button class="random" onclick="window.location.href='{{ path.random }}'">{{ randomMovie.title }}</button>
-
-
             {% endfor %}
-
 
             {% for randomWrongMovie in randomWrongMovies %}
                 <button class="random"> {{ randomWrongMovie.title }}</button>
             {% endfor %}
-
         </div>
     </div>
 

@@ -52,7 +52,7 @@ button:hover{
     height: 60vh;
     width: 80%;
     justify-content: space-around;
-
+    flex-direction: row-reverse;
 }
 
 /* POSTER BLOCK */
@@ -73,12 +73,13 @@ button:hover{
 }
 
 .answers button{
-    background: #8A0707;
-    border-radius: 5px;
-    color: black;
-    font-family: honeydripperregular, sans-serif;
-    font-size: 2em;
-    padding: 0.2em 0;
+    background-color: darkred;
+    width: 400px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'scare_armsregular';
+    font-size: 30px;
 }
 
 /* END BUTTONS ANSWER */

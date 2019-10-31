@@ -32,7 +32,7 @@ class QuizzController extends AbstractController
         $score = new ScoreManager();
         $score = $score->selectAll();
         //randomizing page
-        $randPage = random_int(1, 3);
+        $randPage = random_int(1, 4);
         return $this->twig->render('Quizz/quizz1.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,
@@ -42,6 +42,8 @@ class QuizzController extends AbstractController
         ]);
     }
 
+
+
     public function quizz2()
     {
         //calling MoviesManager
@@ -50,11 +52,14 @@ class QuizzController extends AbstractController
         $randomMovie = $moviesManager->randomId();
         $randomWrongMovie = $moviesManager->randomWrongId();
         //randomizing page
-        $randPage = random_int(1, 3);
+        $randPage = random_int(1, 4);
+        $score = new ScoreManager();
+        $score = $score->selectAll();
         return $this->twig->render('Quizz/quizz2.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,
             'movies'=>$movies,
+            'score'=>$score,
             'path'=> ['random'=>"quizz$randPage"]
         ]);
     }
@@ -66,11 +71,34 @@ class QuizzController extends AbstractController
         $randomMovie = $moviesManager->randomId();
         $randomWrongMovie = $moviesManager->randomWrongId();
         //randomizing page
-        $randPage = random_int(1, 3);
+        $randPage = random_int(1, 4);
+        $score = new ScoreManager();
+        $score = $score->selectAll();
         return $this->twig->render('Quizz/quizz3.html.twig', [
             'randomWrongMovies'=>$randomWrongMovie,
             'randomMovies'=>$randomMovie,
             'movies'=>$movies,
+            'score'=>$score,
+            'path'=> ['random'=>"quizz$randPage"]
+        ]);
+    }
+
+    public function quizz4()
+    {
+        //calling MoviesManager
+        $moviesManager = new MoviesManager();
+        $movies = $moviesManager->selectAll();
+        $moviesPosters = $moviesManager->randomPosters();
+        $moviesNotPosters = $moviesManager->randomWrongPosters();
+        //randomizing page
+        $randPage = random_int(1, 4);
+        $score = new ScoreManager();
+        $score = $score->selectAll();
+        return $this->twig->render('Quizz/quizz4.html.twig', [
+            'movies' => $movies,
+            'moviesPosters' => $moviesPosters,
+            'moviesNotPosters' => $moviesNotPosters,
+            'score'=>$score,
             'path'=> ['random'=>"quizz$randPage"]
         ]);
     }
