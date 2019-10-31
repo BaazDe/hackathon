@@ -6,7 +6,6 @@
     position: absolute;
     height:30px;
 }
-
 #progress{
     background:#8A0707;
 }
@@ -34,7 +33,6 @@
     font-size: 2em;
     text-align: center;
 }
-
 
 .answering{
     display: flex;
@@ -64,7 +62,7 @@
     color: darkred;
     font-family: honeydripperregular, sans-serif;
     font-size: 2em;
-    padding: 0.3%;
+    padding: 0.1%;
     margin: 2%;
 
 }
